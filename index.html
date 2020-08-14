@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>QUIZ WEB APPLICATION</title>
+</head>
+<link rel="stylesheet" href="style.css">
+<link href="https://fonts.googleapis.com/css2?family=Lobster&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Merriweather&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Frijole&family=Special+Elite&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Aclonica&family=Berkshire+Swash&family=Pridi:wght@300&display=swap" rel="stylesheet">
+
+<body>
+
+    <div class="overall">
+
+        <div id="result">
+
+            <h1>QUIZ RESULT</h1>
+
+            <table>
+                <tr>
+                    <td>NAME</td>
+                    <td id="showName"></td>
+                </tr>
+                <tr>
+                    <td>EMAIL</td>
+                    <td id="showEmail"></td>
+                </tr>
+                <tr>
+                    <td>TOTAL MARKS</td>
+                    <td>50</td>
+                </tr>
+                <tr>
+                    <td>OBTAINED MARKS</td>
+                    <td id="showMarks"></td>
+                </tr>
+                <tr>
+                    <td>REMARKS</td>
+                    <td id="showRemarks"></td>
+                </tr>
+            </table>
+
+
+            <button id="back" onclick="refresh()">GO BACK</button>
+
+        </div>
+
+
+        <div id="login">
+
+            <h2>WELCOME TO THE QUIZ APPLICATION</h2>
+
+
+            <form action="#" autocomplete="off">
+                <div>
+                    <input type="text" id="name" maxlength="15" required>
+                    <label for="name">NAME</label>
+                </div>
+                <div>
+                    <input type="email" id="email" maxlength="25" required>
+                    <label for="email">EMAIL</label>
+                </div>
+
+                <button id="start-quiz">START QUIZ</button>
+            </form>
+
+            <div class="footer">
+                <h3>CREATED BY -> ABDUL WAQAR</h3>
+            </div>
+
+
+            <div id="quiz">
+
+
+                <h1 id="setName"></h1>
+                <h2 id="counter">0</h2>
+
+
+
+                <div id="question">
+                    <h3 id="ques">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quod mollitia aperiam tenetur suscipit molestias possimus. Sequi, possimus esse! Nihil accusamus dolore libero quas nulla culpa facere veniam accusantium quis exercitationem!</h3>
+                </div>
+
+
+                <div id="options">
+
+                    <button id="option1" class="option">option1</button>
+                    <button id="option2" class="option">option2</button>
+                    <button id="option3" class="option">option3</button>
+                    <button id="option4" class="option">option4</button>
+
+                </div>
+
+                <button id="next">NEXT</button>
+
+            </div>
+
+
+        </div>
+
+
+
+
+
+
+
+
+
+
+
+
+    </div>
+
+
+
+    <script src="app.js"></script>
+
+</body>
+
+</html>

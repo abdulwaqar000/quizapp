@@ -1,0 +1,292 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+.overall {
+    width: 100%;
+    height: 100vh;
+    background-image: url(images/overall\ background.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+}
+
+#login {
+    position: absolute;
+    top: 50%;
+    left: 23%;
+    transform: translate(-50%, -50%);
+    width: 500px;
+    height: 400px;
+    background-image: linear-gradient(to bottom left, #09203f, #537895);
+    box-shadow: 0px 3px 20px black;
+    border-radius: 20px;
+    text-align: center;
+}
+
+#login h2 {
+    font-family: 'Lobster', cursive;
+    color: white;
+    margin-top: 50px;
+    text-decoration: underline;
+    letter-spacing: 1px;
+}
+
+#login form {
+    margin-top: 50px;
+}
+
+#login form input {
+    margin-top: 30px;
+    box-sizing: border-box;
+    width: 70%;
+    border: none;
+    outline: none;
+    padding: 5px 10px;
+    border-bottom: 2px solid gray;
+    background: transparent;
+    color: white;
+}
+
+#login form div {
+    position: relative;
+}
+
+form div label {
+    display: block;
+    position: absolute;
+    top: 35px;
+    left: 80px;
+    transition: .5s;
+    color: white;
+}
+
+#login form input:focus~label {
+    top: 10px;
+    color: red;
+    font-size: 15px;
+    font-weight: bold;
+}
+
+#login form input:valid~label {
+    top: 10px;
+    color: white;
+    font-size: 15px;
+    font-weight: bold;
+}
+
+#start-quiz {
+    margin-top: 50px;
+    padding: 10px 15px;
+    border-radius: 20px;
+    outline: none;
+    background-image: linear-gradient( #42275a, #734b6d);
+    color: white;
+    font-weight: bold;
+}
+
+#quiz {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    border-radius: 20px;
+    background-image: url(images/quiz\ background.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    backface-visibility: hidden;
+    transform-style: preserve-3d;
+    transform: rotateY(180deg);
+    transition: 3s all;
+    color: white;
+}
+
+#quiz h1 {
+    margin-top: 10px;
+    font-family: 'Pridi', serif;
+    display: inline-block;
+    width: 80%;
+}
+
+#quiz h2 {
+    display: inline-block;
+    float: right;
+    margin: 10px 20px 0px 0px;
+    width: 10%;
+}
+
+#question {
+    margin-top: 20px;
+    width: 75%;
+    height: 120px;
+    overflow-y: auto;
+    float: right;
+    clear: right;
+    padding: 15px;
+    font-family: 'Merriweather', serif;
+}
+
+#options {
+    margin-top: 180px;
+    flex-wrap: nowrap;
+    padding: 0px 50px;
+}
+
+#options button {
+    width: 150px;
+    margin: 5px;
+    padding: 10px;
+    border-radius: 10px;
+    outline: none;
+    border: 2px inset blue;
+    font-weight: bold;
+    font-size: 15px;
+}
+
+#options button:hover {
+    cursor: pointer;
+}
+
+#next {
+    margin-top: 20px;
+    float: right;
+    margin-right: 15px;
+    width: 100px;
+    border-radius: 10px;
+    outline: none;
+    padding: 5px;
+    background-color: black;
+    color: white;
+    font-weight: bold;
+    border: 2px outset rgb(235, 8, 235);
+    transition: .5s;
+}
+
+.footer {
+    margin-top: 30px;
+    font-family: 'Special Elite', cursive;
+}
+
+#next:hover {
+    cursor: pointer;
+    font-size: 12px;
+}
+
+.active {
+    background-color: yellow;
+}
+
+#result {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 500px;
+    height: 400px;
+    background-image: url(images/result\ background.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    border-radius: 20px;
+    z-index: 1;
+    text-align: center;
+    color: white;
+    padding: 20px 10px;
+    display: none;
+}
+
+#result h1 {
+    text-decoration: underline;
+    letter-spacing: 2px;
+}
+
+#result table {
+    margin: 50px;
+}
+
+#result table td {
+    width: 200px;
+    text-align: left;
+    border: 2px solid grey;
+    padding: 5px;
+    border-spacing: 5px;
+    background-color: black;
+}
+
+#result table tr {
+    margin: 10px;
+}
+
+#back {
+    margin-top: 20px;
+    width: 100px;
+    border-radius: 20px;
+    background-image: linear-gradient(#2193b0, #6dd5ed);
+    outline: none;
+    font-weight: bold;
+    padding: 10px;
+}
+
+@media screen and (max-width: 980px) {
+    #login {
+        left: 30%;
+    }
+}
+
+@media screen and (max-width: 400px) {
+    #question {
+        width: 85%;
+    }
+}
+
+@media screen and (max-width: 850px) {
+    #login {
+        left: 35%;
+    }
+}
+
+@media screen and (max-width: 720px) {
+    #login {
+        left: 40%;
+    }
+}
+
+@media screen and (max-width: 630px) {
+    #login {
+        left: 50%;
+        width: 95%;
+    }
+    #quiz h2 {
+        margin-right: 30px;
+    }
+    .footer {
+        margin-top: 20px;
+        font-size: 12px;
+    }
+    #start-quiz {
+        margin-top: 30px;
+    }
+    form div label {
+        left: 10%;
+    }
+    #login form input {
+        width: 85%;
+    }
+    #quiz button {
+        width: 45%;
+        font-size: 13px;
+    }
+    #next {
+        width: 80px !important;
+    }
+    #result {
+        width: 90%;
+    }
+    #question {
+        width: 70%;
+        padding: 10px 70px!important;
+    }
+}
